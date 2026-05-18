@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muni University</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #111;
+  }
+
+  .title-bar {
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    padding: 10px 16px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #111;
+  }
+
+  .page {
+    background: #fff;
+    max-width: 480px;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+
+  /* PHOTO */
+  .photo-section {
+    padding: 18px 16px 10px;
+  }
+  .photo-box {
+    width: 200px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  .photo-box img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* NAME & SECTION BANNERS */
+  .name-banner, .section-banner {
+    margin: 12px 10px 0;
+    background: #dce4ef;
+    border-radius: 6px;
+    text-align: center;
+    padding: 12px 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #111;
+  }
+
+  /* INFO ROWS */
+  .info-section { padding: 6px 10px 0; }
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 7px 6px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .info-row .key { color: #444; font-size: 13.5px; min-width: 110px; }
+  .info-row .val { font-weight: bold; font-size: 13.5px; color: #111; text-align: right; }
+
+  /* COURSES */
+  .courses-section { padding: 4px 10px 0; }
+  .course-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 8px 6px;
+    border-bottom: 1px solid #f0f0f0;
+    gap: 8px;
+  }
+  .course-name { font-size: 13px; color: #111; flex: 1; line-height: 1.4; }
+  .course-status { font-weight: bold; font-size: 13px; color: #111; white-space: nowrap; flex-shrink: 0; }
+
+  /* ACCORDION */
+  .accordion { margin: 12px 10px 0; border: 1px solid #ccc; border-radius: 6px; overflow: hidden; }
+  .accordion-header {
+    background: #3a3a3a; color: #fff;
+    padding: 13px 14px; font-size: 14px; font-weight: bold;
+    cursor: pointer; display: flex; align-items: center; gap: 10px;
+    user-select: none;
+  }
+  .accordion-icon { font-size: 20px; font-weight: 300; line-height: 1; transition: transform 0.2s; }
+  .accordion-header.open .accordion-icon { transform: rotate(45deg); }
+  .accordion-body { display: none; padding: 12px 14px; background: #fff; border-top: 1px solid #ccc; }
+  .accordion-body.open { display: block; }
+  .accordion-body ul { list-style: disc; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+  .accordion-body ul li { font-size: 13px; line-height: 1.5; color: #222; }
+
+  /* FOOTER */
+  .footer {
+    background: #e8e8e8; text-align: center;
+    padding: 14px; font-size: 13px; color: #444; margin-top: 16px;
+  }
+
+  @media print {
+    .title-bar { display: none; }
+    body { background: #fff; }
+  }
+</style>
+</head>
+<body>
+
+<div class="title-bar">Muni University</div>
+
+<div class="page">
+
+  <!-- PHOTO -->
+  <div class="photo-section">
+    <div class="photo-box">
+      <img src="IMG-20260518-WA0007.jpg" alt="Student Photo">
+    </div>
+  </div>
+
+  <!-- NAME -->
+  <div class="name-banner">MUNGUFENI DAN</div>
+
+  <!-- STUDENT INFO -->
+  <div class="info-section">
+    <div class="info-row"><span class="key">STD NO.</span><span class="val">2501202154</span></div>
+    <div class="info-row"><span class="key">REG NO.</span><span class="val">2025/U/MIT/02154</span></div>
+    <div class="info-row"><span class="key">NAME.</span><span class="val">MUNGUFENI DAN</span></div>
+    <div class="info-row"><span class="key">SEX.</span><span class="val">M</span></div>
+    <div class="info-row"><span class="key">ACC YR.</span><span class="val">2025/2026</span></div>
+    <div class="info-row"><span class="key">STUDY YR.</span><span class="val">1</span></div>
+    <div class="info-row"><span class="key">SEM</span><span class="val">2</span></div>
+    <div class="info-row"><span class="key">PROV.</span><span class="val">false</span></div>
+    <div class="info-row"><span class="key">PROV EXP.</span><span class="val">null</span></div>
+    <div class="info-row"><span class="key">REG BY.</span><span class="val">SELF</span></div>
+    <div class="info-row"><span class="key">A/C BAL.</span><span class="val">UGX. 0</span></div>
+  </div>
+
+  <!-- COURSE UNITS -->
+  <div class="section-banner">COURSE UNITS</div>
+
+  <div class="courses-section">
+    <div class="course-row">
+      <span class="course-name">(BEM1231) INTRODUCTION TO ORGANIZATIONAL BEHAVIOUR</span>
+      <span class="course-status">normal</span>
+    </div>
+    <div class="course-row">
+      <span class="course-name">(ISM1331) COMMUNITY ENGAGEMENT (CORE - AUDITED)</span>
+      <span class="course-status">normal</span>
+    </div>
+    <div class="course-row">
+      <span class="course-name">(ITM1232) DATABASE MANAGEMENT SYSTEM</span>
+      <span class="course-status">normal</span>
+    </div>
+    <div class="course-row">
+      <span class="course-name">(CMS1232) INTRODUCTION TO DATA STRUCTURES AND ALGORITHMS</span>
+      <span class="course-status">normal</span>
+    </div>
+    <div class="course-row">
+      <span class="course-name">(ITM1231) COMPUTER NETWORK I (CISCO CERTIFIED NETWORK ASSOCIATE 1 AND 2 SYLLABUS)</span>
+      <span class="course-status">normal</span>
+    </div>
+    <div class="course-row">
+      <span class="course-name">(CMU1102) COMMUNICATION SKILLS</span>
+      <span class="course-status">normal</span>
+    </div>
+    <div class="course-row">
+      <span class="course-name">(CSM1231) FUNDAMENTALS OF COMPUTER PROGRAMMING USING PYTHON</span>
+      <span class="course-status">normal</span>
+    </div>
+  </div>
+
+  <!-- STUDENT DETAILS ACCORDION -->
+  <div class="accordion">
+    <div class="accordion-header" id="accHeader" onclick="toggleAccordion()">
+      <span class="accordion-icon">+</span>
+      <span>Student Details</span>
+    </div>
+    <div class="accordion-body" id="accBody">
+      <ul>
+        <li>MIT - BACHELOR OF INFORMATION TECHNOLOGY</li>
+        <li>FTS - TECHNOSCIENCE</li>
+        <li>MU - MUNI UNIVERSITY</li>
+        <li>Campus: MAIN</li>
+        <li>Registered On: FRI 06-FEB-2026 05:13 PM</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">© Zeenode Ltd</div>
+
+</div>
+
+<script>
+function toggleAccordion() {
+  document.getElementById('accHeader').classList.toggle('open');
+  document.getElementById('accBody').classList.toggle('open');
+}
+</script>
+</body>
+</html>
